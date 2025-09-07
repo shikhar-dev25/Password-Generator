@@ -130,24 +130,38 @@ function App() {
         </div>
       </div>
 
-      <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-base sm:text-lg text-gray-800">
-        <label className="flex items-center gap-2">
-          <input
-            type="checkbox"
-            defaultChecked={nums}
-            onChange={() => setNums((prev) => !prev)}
-          />
-          <span>Numbers</span>
-        </label>
+      <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-base sm:text-sm text-gray-800">
+        <label class="relative inline-flex items-center cursor-pointer">
+  <input 
+  type="checkbox" 
+  defaultChecked={nums}
+  onChange={() => setNums((prev) => !prev)}
+  class="sr-only peer" />
+  <div
+    class="group peer bg-white rounded-full duration-300 w-12 h-6 ring-2 ring-gray-400 
+           after:duration-300 after:bg-gray-400 peer-checked:after:bg-blue-500 
+           peer-checked:ring-blue-500 after:rounded-full after:absolute after:h-4 after:w-4 
+           after:top-1 after:left-1 after:flex after:justify-center after:items-center 
+           peer-checked:after:translate-x-6 peer-hover:after:scale-95"
+  ></div>
+  <span className='px-3 text-base'>Include Numbers</span>
+</label>
 
-        <label className="flex items-center gap-2">
-          <input
-            type="checkbox"
-            defaultChecked={chars}
-            onChange={() => setChars((prev) => !prev)}
-          />
-          <span>Symbols</span>
-        </label>
+
+        <label class="relative inline-flex items-center cursor-pointer">
+  <input 
+  type="checkbox" 
+  defaultChecked={chars}
+  onChange={() => setChars((prev) => !prev)}
+  class="sr-only peer" />
+  <div
+    class="group peer bg-white rounded-full duration-300 w-12 h-6 ring-2 ring-gray-400 
+           after:duration-300 after:bg-gray-400 peer-checked:after:bg-blue-500 peer-checked:ring-blue-500 after:rounded-full after:absolute after:h-4 after:w-4 
+           after:top-1 after:left-1 after:flex after:justify-center after:items-center 
+           peer-checked:after:translate-x-6 peer-hover:after:scale-95"
+  ></div>
+  <span className='px-3 text-base'>Include Symbols</span>
+</label>
       </div>
     </div>
   </div>
